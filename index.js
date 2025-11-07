@@ -5,6 +5,12 @@ import bodyParser from "body-parser";
 
 const app = express();
 app.use(cors());
+
+app.use(cors({
+  origin: "*", // allow any origin
+  methods: ["GET", "POST", "PUT", "DELETE"], // optional
+  allowedHeaders: ["Content-Type", "Authorization"] // optional
+}));
 app.use(bodyParser.json());
 
 // ✅ Replace with your own Razorpay credentials
