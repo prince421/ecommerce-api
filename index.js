@@ -5,12 +5,6 @@ import bodyParser from "body-parser";
 
 const app = express();
 app.use(cors());
-
-app.use(cors({
-  origin: "*", // allow any origin
-  methods: ["GET", "POST", "PUT", "DELETE"], // optional
-  allowedHeaders: ["Content-Type", "Authorization"] // optional
-}));
 app.use(bodyParser.json());
 
 // ✅ Replace with your own Razorpay credentials
@@ -38,6 +32,6 @@ app.post("/create-order", async (req, res) => {
   }
 });
 
-port = "http://localhost:3000/" || 5000
+// port = "http://localhost:3000/" || 5000
 
-app.listen(port, () => console.log("✅ Razorpay backend running on port 5000"));
+app.listen(5000, () => console.log("✅ Razorpay backend running on port 5000"));
