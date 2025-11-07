@@ -40,4 +40,4 @@ app.post("/create-order", async (req, res) => {
 
 port = "http://localhost:3000/" || 5000
 
-app.listen(5000, () => console.log("✅ Razorpay backend running on port 5000"));
+app.listen(port, () => console.log("✅ Razorpay backend running on port 5000"));
